@@ -25,6 +25,10 @@ app.get('/games/morpion', (req, res) => {
     res.sendFile(path.join(__dirname, 'templates/games/morpion.html'));
 });
 
+app.get('/chats/message', (req, res) => {
+    res.sendFile(path.join(__dirname, 'templates/chats/message.html'));
+});
+
 http.listen(port, () => {
     console.log(`Listening on http://localhost:${8080}/`);
 });
