@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Tic-tac-toe</title>
+    <title>Morpion</title>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<body style="background-color: rgb(211, 241, 236);">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">Pentiminax</a>
+            <a class="navbar-brand" href="/">M</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -29,7 +29,7 @@
                             Jeux
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/games/tic-tac-toe">Morpion</a></li>
+                            <li><a class="dropdown-item" href="/games/morpion">Morpion</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -43,21 +43,20 @@
 
                 <div class="alert d-none" role="alert" id="turn-message"></div>
 
-                <div class="card mb-3" id="user-card">
-                    <div class="card-body">
+                    <div class="card mb-3" id="user-card">
+                        <div class="card-body">
 
-                        <form method="POST" id="form">
-                            <div class="mb-3">
+                            <form method="POST" id="form">
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Nom d'utilisateur</label>
+                                    <input type="text" class="form-control" id="username" minlength="2" maxlength="20"
+                                        placeholder="Saisir votre nom d'utilisateur" required>
+                                </div>
+                                <button class="btn btn-primary" id="start" type="submit">Créer un salon privée</button>
+                            </form>
 
-                                <label for="username" class="form-label">Nom d'utilisateur</label>
-                                <input type="text" class="form-control" id="username" minlength="2" maxlength="20"
-                                    placeholder="Saisir votre nom d'utilisateur" required>
-                            </div>
-                            <button class="btn btn-primary" id="start" type="submit">Créer un salon privée</button>
-                        </form>
-
+                        </div>
                     </div>
-                </div>
 
                 <div class="card mb-3 d-none" id="rooms-card">
                     <div class="card-header">Salons disponibles</div>
