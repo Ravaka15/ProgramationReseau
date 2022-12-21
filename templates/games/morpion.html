@@ -12,7 +12,9 @@
 <body style="background-color: rgb(211, 241, 236);">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">M</a>
+            <div class="nav__logo">
+            <a class="nav__logo-text" href="/">M</a>
+        </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -21,16 +23,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Accueil</a>
+                        <a class="nav-link" style="color: white;" href="/">Accueil</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="gamesDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Jeux
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/games/morpion">Morpion</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: white;" href="/games/morpion">Jouer</a>
                     </li>
                 </ul>
             </div>
