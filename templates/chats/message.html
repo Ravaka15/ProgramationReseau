@@ -2,13 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <title>Chats</title>
+
+
+ <style>
+      #form { background: rgba(0, 0, 0, 0.15); padding: 0.25rem; bottom: 0; left: 0; right: 0; display: flex; height: 3rem; box-sizing: border-box; backdrop-filter: blur(10px); }
+      #input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
+      #input:focus { outline: none; }
+      #form > button { background: blue; border: none; padding: 0 1rem; margin: 0.25rem; border-radius: 3px; outline: none; color: #fff; }
+
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages > li { padding: 0.5rem 1rem; }
+      #messages > li:nth-child(odd) { background: #efefef; }
+    </style>
+
+
+
 </head>
-<body>
+<body style="background-color: rgb(211, 241, 236);">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
             <div class="nav__logo">
@@ -25,7 +39,7 @@
                         <a class="nav-link" style="color: white;" href="/">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="color: white;" href="/chat/message">Message</a>
+                        <a class="nav-link" style="color: white;" href="/chats/message">Message</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="color: white;" href="/games/morpion">Jouer</a>
@@ -34,9 +48,196 @@
             </div>
         </div>
     </nav>
+                
+             
+                <section>
+                    <div class="container py-5">
+                  
+                      <div class="row">
+                        <div class="col-md-12">
+                  
+                          <div class="card" id="chat3" style="border-radius: 15px;">
+                            <div class="card-body">
+                  
+                              <div class="row">
 
-    <script src="./jquery/jquery.min.js"></script>
-    <script src="./bootstrap/js/bootstrap.min.js"></script>
+                                <div class="col-md-6 col-lg-5 col-xl-4 mb-4 mb-md-0">
+                  
+                                  <div class="p-3">
+                  
+                                    <div class="input-group rounded mb-3">
+                                      <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                                        aria-describedby="search-addon" />
+                                      <span class="input-group-text border-0" id="search-addon">
+                                        <i class="fas fa-search"></i>
+                                      </span>
+                                    </div>
+                  
+                                    <div data-mdb-perfect-scrollbar="true" style="position: relative; height: 400px">
+                                      <ul class="list-unstyled mb-0">
+                                        <li class="p-2 border-bottom">
+                                          <a href="#!" class="d-flex justify-content-between">
+                                            <div class="d-flex flex-row">
+                                              <div>
+                                                <img
+                                                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                                                  alt="avatar" class="d-flex align-self-center me-3" width="60">
+                                                <span class="badge bg-success badge-dot"></span>
+                                              </div>
+                                              <div class="pt-1">
+                                                <p class="fw-bold mb-0">Marie Horwitz</p>
+                                                <p class="small text-muted">Hello, Are you there?</p>
+                                              </div>
+                                            </div>
+                                            <div class="pt-1">
+                                              <p class="small text-muted mb-1">Just now</p>
+                                              <span class="badge bg-danger rounded-pill float-end">3</span>
+                                            </div>
+                                          </a>
+                                        </li>
+                                        <li class="p-2 border-bottom">
+                                          <a href="#!" class="d-flex justify-content-between">
+                                            <div class="d-flex flex-row">
+                                              <div>
+                                                <img
+                                                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava5-bg.webp"
+                                                  alt="avatar" class="d-flex align-self-center me-3" width="60">
+                                                <span class="badge bg-warning badge-dot"></span>
+                                              </div>
+                                              <div class="pt-1">
+                                                <p class="fw-bold mb-0">Kate Moss</p>
+                                                <p class="small text-muted">Lorem ipsum dolor sit.</p>
+                                              </div>
+                                            </div>
+                                            <div class="pt-1">
+                                              <p class="small text-muted mb-1">Yesterday</p>
+                                            </div>
+                                          </a>
+                                        </li>
+                                        <li class="p-2">
+                                          <a href="#!" class="d-flex justify-content-between">
+                                            <div class="d-flex flex-row">
+                                              <div>
+                                                <img
+                                                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp"
+                                                  alt="avatar" class="d-flex align-self-center me-3" width="60">
+                                                <span class="badge bg-success badge-dot"></span>
+                                              </div>
+                                              <div class="pt-1">
+                                                <p class="fw-bold mb-0">Ben Smith</p>
+                                                <p class="small text-muted">Lorem ipsum dolor sit.</p>
+                                              </div>
+                                            </div>
+                                            <div class="pt-1">
+                                              <p class="small text-muted mb-1">Yesterday</p>
+                                            </div>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                  
+                                  </div>
+                  
+                                </div>
+                  
+                                <div class="col-md-6 col-lg-7 col-xl-8">
+                  
+                                  <div class="pt-3 pe-3" data-mdb-perfect-scrollbar="true"
+                                    style="position: relative; height: 400px">
+                  
+                                    <div class="d-flex flex-row justify-content-start">
+                                      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp"
+                                        alt="avatar 1" style="width: 45px; height: 100%;">
+                                      <div>
+                                        <p class="small p-2 ms-3 mb-1 rounded-3" style="background-color: #f5f6f7;">Lorem ipsum
+                                          dolor
+                                          sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                          dolore
+                                          magna aliqua.</p>
+                                        <p class="small ms-3 mb-3 rounded-3 text-muted float-end">12:00 PM | Aug 13</p>
+                                      </div>
+                                    </div>
+                                    <div class="d-flex flex-row justify-content-end">
+                                      <div>
+                                        <p class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">Ut enim ad minim veniam,
+                                          quis
+                                          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <p class="small me-3 mb-3 rounded-3 text-muted">12:00 PM | Aug 13</p>
+                                      </div>
+                                      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                                        alt="avatar 1" style="width: 45px; height: 100%;">
+                                    </div>  
+                                    <div class="d-flex flex-row justify-content-end">
+                                      <div>
+                                        <p class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">Ut enim ad minima veniam,
+                                          quis
+                                          nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
+                                          commodi
+                                          consequatur?</p>
+                                        <p class="small me-3 mb-3 rounded-3 text-muted">12:00 PM | Aug 13</p>
+                                      </div>
+                                      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                                        alt="avatar 1" style="width: 45px; height: 100%;">
+                                    </div>
+                  
+                                  </div>
+                  
+                                  <div class="text-muted d-flex justify-content-start align-items-center pe-3 pt-3 mt-2">
+                                    
+                                    <input type="text" class="form-control form-control-lg" id="exampleFormControlInput2"
+                                      placeholder="Type message">
+                                        <a class="ms-1 text-muted" href="#!"><i class="fas fa-paperclip"></i></a>
+                                        <a class="ms-3 text-muted" href="#!"><i class="fas fa-smile"></i></a>
+                                        <a class="ms-3" href="#!"><i class="fas fa-paper-plane"></i></a><ul id="messages"></ul>
+                                        <!-- <form id="form" action="">
+                                                <input id="input" autocomplete="off" /><button>Envoyer</button>
+                                        </form> -->
+
+                                  </div>
+                  
+                                </div>
+                              </div>
+                  
+                            </div>
+                          </div>
+                  
+                        </div>
+                      </div>
+                  
+                    </div>
+                  </section>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+      var socket = io();
+
+      var messages = document.getElementById('messages');
+      var form = document.getElementById('form');
+      var input = document.getElementById('input');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (input.value) {
+          socket.emit('chat message', input.value);
+          input.value = '';
+        }
+      });
+
+      socket.on('chat message', function(msg) {
+        var item = document.createElement('li');
+        item.textContent = msg;
+        messages.appendChild(item);
+        window.scrollTo(0, document.body.scrollHeight);
+      });
+    </script>
+
+
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="client.js"></script>
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/index.js"></script>
 </body>
